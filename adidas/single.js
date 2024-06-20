@@ -1,4 +1,4 @@
-import { loadGLTF, loadAudio } from "../libs/loader";
+import { loadGLTF, loadAudio } from "../libs/loader.js";
 const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a new MindARThree instance and configure it
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
             container: document.body,
-            imageTargetSrc: '../assets/targets/adidas/adidasSamba.mind'
+            imageTargetSrc: '../fashionHeaven/assets/adidas/adidasSamba.mind'
         });
 
         // Extract the renderer, scene, and camera from the MindARThree instance

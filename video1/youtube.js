@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Create a MindARThree instance with the specified container and image target source
   const mindarThree = new window.MINDAR.IMAGE.MindARThree({
   container: document.body,
-  imageTargetSrc: '../../assets/targets/hoodie1/hoodie1.mind',
+  imageTargetSrc: '../fashionHeaven/assets/targets/hoodie1.mind',
   });
   // Extract the renderer, CSS renderer, scene, CSS scene, and camera from the MindARThree instance
   const { renderer, cssRenderer, scene, cssScene, camera } = mindarThree;

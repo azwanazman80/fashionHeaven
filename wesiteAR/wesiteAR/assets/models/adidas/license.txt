@@ -1,0 +1,11 @@
+Model Information:
+* title:	Old Adidas Samba Sneaker
+* source:	https://sketchfab.com/3d-models/old-adidas-samba-sneaker-b23ee595a5e54bcca9928bd098c47a7e
+* author:	Kai Christmann (https://sketchfab.com/kai_am_rhein)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Old Adidas Samba Sneaker" (https://sketchfab.com/3d-models/old-adidas-samba-sneaker-b23ee595a5e54bcca9928bd098c47a7e) by Kai Christmann (https://sketchfab.com/kai_am_rhein) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

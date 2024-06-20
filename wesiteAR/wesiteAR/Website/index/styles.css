@@ -1,0 +1,874 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.shop-name {
+    margin: 5px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../../Website/index/images/backgroundshoes.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .shop-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .shop-name {
+        font-size: 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+.products {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.products h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.product-card:last-child {
+    margin-right: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.product-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.view-button {
+    background-color: #28a745;
+}
+
+.view-button:hover {
+    background-color: #218838;
+}
+
+.category-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-button {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.shoes {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.shoes h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.shoe-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.shoe-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.shoe-card:last-child {
+    margin-right: 0;
+}
+
+.shoe-card:hover {
+    transform: translateY(-5px);
+}
+
+.shoe-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.shoe-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.shoe-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.shoe-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.shoe-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.view-button {
+    background-color: #28a745;
+}
+
+.view-button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .shoes h1 {
+        font-size: 28px;
+    }
+
+    .shoe-title {
+        font-size: 20px;
+    }
+
+    .shoe-description {
+        font-size: 14px;
+    }
+
+    .shoe-price {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 10px;
+    }
+}
+
+.hats {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hats h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.hat-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.hat-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.hat-card:last-child {
+    margin-right: 0;
+}
+
+.hat-card:hover {
+    transform: translateY(-5px);
+}
+
+.hat-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hat-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.hat-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.hat-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hat-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sunglasses {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.sunglasses h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.sunglass-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.sunglass-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.sunglass-card:last-child {
+    margin-right: 0;
+}
+
+.sunglass-card:hover {
+    transform: translateY(-5px);
+}
+
+.sunglass-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sunglass-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.sunglass-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sunglass-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sunglass-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sunglasses {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.sunglasses h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.sunglass-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.sunglass-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.sunglass-card:last-child {
+    margin-right: 0;
+}
+
+.sunglass-card:hover {
+    transform: translateY(-5px);
+}
+
+.sunglass-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sunglass-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.sunglass-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sunglass-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sunglass-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hoodies {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hoodies h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.hoodie-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.hoodie-card {
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    margin-right: 20px;
+    transition: transform 0.3s;
+}
+
+.hoodie-card:last-child {
+    margin-right: 0;
+}
+
+.hoodie-card:hover {
+    transform: translateY(-5px);
+}
+
+.hoodie-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hoodie-title {
+    font-size: 24px;
+    margin: 15px 0 10px;
+}
+
+.hoodie-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.hoodie-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hoodie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #e8e8e8;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.about-description {
+    max-width: 600px;
+    margin-right: 40px;
+}
+
+.about-description h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+.cart {
+    padding: 40px 20px;
+}
+
+.cart h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #4a4a4a;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.item-price {
+    font-size: 1.1em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    background-color: #4a4a4a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quantity-btn:hover {
+    background-color: #333;
+}
+
+.item-quantity input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    background-color: #ff4a4a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #e60000;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total-label {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #4a4a4a;
+}
+
+.checkout-btn {
+    background-color: #4a4a4a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+/* Ensure the existing styles for cta-button, view-button, and add-to-cart-button are included as before */
+
+/* Ensure the existing styles for cta-button, view-button, and add-to-cart-button are included as before */
+
+
+/* Ensure the existing styles for cta-button, view-button, and add-to-cart-button are included as before */
+
+/* Ensure the existing styles for cta-button, view-button, and add-to-cart-button are included as before */

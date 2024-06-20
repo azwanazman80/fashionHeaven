@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Fashion Heaven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../index/images/shoelogoAR.png" alt="Fashion Heaven Logo" class="shop-logo">
+            <p class="shop-name">Fashion Heaven</p>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart">
+            <h1>Your Shopping Cart</h1>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="../index/images/adidasSamba1.png" alt="Shoe">
+                    <div class="item-details">
+                        <p class="item-name">Stylish Shoe</p>
+                        <p class="item-price">$50.00</p>
+                        <div class="item-quantity">
+                            <button class="quantity-btn">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <!-- Repeat for other items in the cart -->
+            </div>
+            <div class="cart-summary">
+                <p class="total-label">Total:</p>
+                <p class="total-price">$50.00</p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fashion Heaven. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { loadGLTF, loadAudio } from "../../libs/loader.js";
+import { loadGLTF, loadAudio } from "../libs/loader.js";
 const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a new MindARThree instance and configure it
         const mindarThree = new window.MINDAR.IMAGE.MindARThree({
             container: document.body,
-            imageTargetSrc: '../../assets/targets/adidas/adidasSamba.mind'
+            imageTargetSrc: '../assets/targets/adidas/adidasSamba.mind'
         });
 
         // Extract the renderer, scene, and camera from the MindARThree instance
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scene.add(light);
 
         // Load a 3D model (adidas) using the loadGLTF function and configure its scale and position
-        const adidas = await loadGLTF('../../assets/models/adidas/scene.gltf');
+        const adidas = await loadGLTF('../assets/models/adidas/scene.gltf');
         adidas.scene.scale.set(3, 3, 3);
         adidas.scene.position.set(0, -0.4, 0);
         adidas.scene.userData.clickable = true; // Mark the model as clickable
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Create an audio object and load the sound
         const sound = new THREE.Audio(listener);
-        const audio = await loadAudio('../../assets/sounds/adidas/sambavoice.wav');
+        const audio = await loadAudio('../assets/sounds/adidas/sambavoice.wav');
         sound.setBuffer(audio);
 
         // Event listener for click events
